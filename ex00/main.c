@@ -6,22 +6,21 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 10:06:47 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/20 14:12:23 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/20 14:30:23 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
+#include "header.h"
 
-int		check_errors(char *str)
-{
-
-}
+//int		ft_print_dev(char **tab);				//remove
+//int		ft_print(char **tab);
+//extern char 	**tab;
 
 int main(int argc, char **argv)
 {
-	if (argc != 2 || check_errors(argv[1]))
-		return (0);
+	// if (argc != 2 || check_errors(argv[1]))
+	// 	return (0);
 
 
 	char **tab;
@@ -72,24 +71,10 @@ int main(int argc, char **argv)
 	tab[5][4] = '2';
 	tab[5][5] = '$';
 
-	int k = -1;
-	int j;
-	while(k++ < 5)
-	{	
-		j = -1;
-		while (j++ < 5)
-		{
-			printf("%c", tab[k][j]);
-			printf("  |  ");
-		}
-	printf("\n");
-	printf("----------------------------------");
-	printf("\n");
-	}
-
-	for(int i = 0; i < 6; ++i) 
-		free(tab[i]); 
-	free(tab);
-	
+	ft_print_dev(tab); 									//remove
+	ft_print(tab);
+		for(int i = 0; i < 6; ++i) //remove
+			free(tab[i]);		 //remove 
+		free(tab); 
 	return 0;
 }
