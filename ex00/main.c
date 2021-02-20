@@ -6,30 +6,23 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 10:06:47 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/20 18:34:33 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/20 18:46:05 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-void	ft_putmax();
-int		ft_print_dev(char **tab);
-int		ft_print(char **tab);
-
-//int		ft_print_dev(char **tab);				//remove
-//int		ft_print(char **tab);
-//extern char 	**tab;
-
-int	g_RC = 4;
-
 int main(int argc, char **argv)
 {
-	// if (argc != 2 || check_errors(argv[1]))
-	// 	return (0);
-
 	(void) argc;
 	(void) argv;
-	// char **tab;
+
+//	if (argc != 2 || check_errors(argv[1]))
+//		return (0);
+	
+	int 	result;
+	result = check_errors("1 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2"); // remove
+	printf("%d\n", result);
 	
 	tab = malloc(36 * sizeof(char)); 
 	for(int i = 0; i < 6; i++)
@@ -127,6 +120,6 @@ int main(int argc, char **argv)
 	// ft_print(tab);
 		for(int i = 0; i < 6; ++i) //remove
 			free(tab[i]);		 //remove 
-		free(tab); 
+		free(tab);  
 	return 0;
-}
+} 

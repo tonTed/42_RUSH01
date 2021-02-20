@@ -6,15 +6,13 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 13:05:51 by gcollet           #+#    #+#             */
-/*   Updated: 2021/02/20 15:20:22 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/20 18:45:43 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
 void	ft_putchar(char c);
-
-//void	ft_putchar(char c);
 
 int		ft_print_dev(char **tab)
 {
@@ -61,4 +59,30 @@ int		ft_print(char **tab)
 	ft_putchar('\n');
 	}
 	return 0;
+}
+
+int check_errors(char *str)
+{
+	int i;
+	int count;
+
+	i = -1;
+	count = 0;
+	while (str[++i])
+	{
+		if (str[i] != ' ')
+			++count;
+		if (str[i] < '1' && str[i] > '9' && str[i] != ' ')
+			return (404);
+	}
+	if (!(ft_sqrt(count)))
+		return (404);
+	i = 0;
+	while (str[i + 1])
+	{
+		if (str[i] < '1' || str[i] > g_RC + '0')
+			return (404);
+		i += 2;
+	}
+		return(1);
 }
