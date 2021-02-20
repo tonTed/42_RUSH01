@@ -6,9 +6,11 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 14:52:26 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/20 14:52:37 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/20 16:54:10 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "header.h"
 
 int	ft_sqrt(int nb)
 {
@@ -18,6 +20,9 @@ int	ft_sqrt(int nb)
 	if (!(nb > 2147395600))
 	while (++i <= nb)
 		if (i * i == nb && nb % i == 0)
-			return (i);
+		{
+			g_RC = i;
+			return (1);
+		}
 	return 0;
 }
