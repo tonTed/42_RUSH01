@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lib.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcollet <marvin@42quebec.com>              +#+  +:+       +#+        */
+/*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 13:18:42 by gcollet           #+#    #+#             */
-/*   Updated: 2021/02/20 14:12:33 by gcollet          ###   ########.fr       */
+/*   Updated: 2021/02/20 15:20:19 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "header.h"
-#include <unistd.h>
 
 void	ft_putchar(char c)
 {

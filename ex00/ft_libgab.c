@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_libgab.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcollet <marvin@42quebec.com>              +#+  +:+       +#+        */
+/*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 13:05:51 by gcollet           #+#    #+#             */
-/*   Updated: 2021/02/20 14:12:19 by gcollet          ###   ########.fr       */
+/*   Updated: 2021/02/20 15:20:22 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
-#include <unistd.h>
+
+void	ft_putchar(char c);
 
 //void	ft_putchar(char c);
 
