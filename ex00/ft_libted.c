@@ -6,7 +6,7 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 14:52:26 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/20 16:52:27 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/20 18:29:12 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,29 +36,49 @@ void	ft_putmax()
 	while(++col <= g_RC)
 	{
 		printf("FIRST LOOP row: %d, col: %d\n", row, col);
-		printf("%c\n\n", tab[row][col]);
-		if(tab[row][col] == 'A')
+		if(tab[row][col] == g_RC + '0')
 		{
 			index = 0;
 			while(++index <= g_RC)
 			{
-				printf("%c\n\n", tab[index][col]);
+				tab[index][col] = index + '0';
 			}
 		}
 	}
 	while(++row <= g_RC)
 	{
 		printf("SECOND LOOP row: %d, col: %d\n", row, col);
-		printf("%c\n\n", tab[row][col]);
+		if(tab[row][col] == g_RC + '0')
+		{
+			index = 0;
+			while(++index <= g_RC)
+			{
+				tab[row][index] = g_RC - index + 1 + '0';
+			}
+		}
 	}	
 	while(--col >= 1)
 	{
-		printf("FIRST LOOP row: %d, col: %d\n", row, col);
-		printf("%c\n\n", tab[row][col]);
+		printf("THIRD LOOP row: %d, col: %d\n", row, col);
+		if(tab[row][col] == g_RC + '0')
+		{
+			index = 0;
+			while(++index <= g_RC)
+			{
+				tab[index][col] = g_RC - index + 1 + '0';
+			}
+		}
 	}
 	while(--row >= 1)
 	{
-		printf("SECOND LOOP row: %d, col: %d\n", row, col);
-		printf("%c\n\n", tab[row][col]);
+		printf("FOUR LOOP row: %d, col: %d\n", row, col);
+		if(tab[row][col] == g_RC + '0')
+		{
+			index = 0;
+			while(++index <= g_RC)
+			{
+				tab[row][index] = index + '0';
+			}
+		}
 	}	
 }
