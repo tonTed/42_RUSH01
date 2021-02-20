@@ -6,27 +6,28 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 10:06:47 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/20 14:13:30 by gcollet          ###   ########.fr       */
+/*   Updated: 2021/02/20 14:30:23 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "header.h"
+
 #include <stdlib.h>
+#include "header.h"
 
 //int		ft_print_dev(char **tab);				//remove
 //int		ft_print(char **tab);
 //extern char 	**tab;
 
-int main()
+int main(int argc, char **argv)
 {
+	// if (argc != 2 || check_errors(argv[1]))
+	// 	return (0);
+
+
+	char **tab;
 	
-	//input = "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2";
-
-
-	int i = 0;
-	tab =(char **) malloc(36 * sizeof(char*)); 
-		for(int i = 0; i < 6; ++i) 
-			tab[i] = malloc( 6 *sizeof(char)); 
-
+	tab = malloc(36 * sizeof(char)); 
+	for(int i = 0; i < 6; i++)
+		tab[i] = malloc(6 * sizeof(char));
 
 	tab[0][0] = '$';
 	tab[0][1] = '4';
@@ -73,7 +74,7 @@ int main()
 	ft_print_dev(tab); 									//remove
 	ft_print(tab);
 		for(int i = 0; i < 6; ++i) //remove
-			free(tab[i]); //remove 
+			free(tab[i]);		 //remove 
 		free(tab); 
 	return 0;
 }
