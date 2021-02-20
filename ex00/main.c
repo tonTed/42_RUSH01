@@ -6,22 +6,25 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 10:06:47 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/20 14:30:23 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/20 17:23:33 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "header.h"
+#include <stdio.h>
 
-//int		ft_print_dev(char **tab);				//remove
-//int		ft_print(char **tab);
-//extern char 	**tab;
+int check_errors(char *str);
 
 int main(int argc, char **argv)
 {
-	// if (argc != 2 || check_errors(argv[1]))
-	// 	return (0);
+//	if (argc != 2 || check_errors(argv[1]))
+//		return (0);
+	
+	int 	result;
 
+	result = check_errors("1 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2");
+	printf("%d\n", result);
 
 	char **tab;
 	
@@ -75,6 +78,6 @@ int main(int argc, char **argv)
 	ft_print(tab);
 		for(int i = 0; i < 6; ++i) //remove
 			free(tab[i]);		 //remove 
-		free(tab); 
+		free(tab);  
 	return 0;
-}
+} 
