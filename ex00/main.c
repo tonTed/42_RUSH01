@@ -6,18 +6,29 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 10:06:47 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/20 10:30:58 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/20 14:12:23 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int main(int argc, char const *argv[])
+int		check_errors(char *str)
 {
-	
-	//input = "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2";
 
-	char tab[6][6];
+}
+
+int main(int argc, char **argv)
+{
+	if (argc != 2 || check_errors(argv[1]))
+		return (0);
+
+
+	char **tab;
+	
+	tab = malloc(36 * sizeof(char)); 
+	for(int i = 0; i < 6; i++)
+		tab[i] = malloc(6 * sizeof(char));
 
 	tab[0][0] = '$';
 	tab[0][1] = '4';
@@ -61,17 +72,24 @@ int main(int argc, char const *argv[])
 	tab[5][4] = '2';
 	tab[5][5] = '$';
 
-	
-	int i = -1;
+	int k = -1;
 	int j;
-	while(i++ < 5)
+	while(k++ < 5)
 	{	
 		j = -1;
 		while (j++ < 5)
 		{
-			printf("%c", tab[i][j]);
+			printf("%c", tab[k][j]);
+			printf("  |  ");
 		}
 	printf("\n");
+	printf("----------------------------------");
+	printf("\n");
 	}
+
+	for(int i = 0; i < 6; ++i) 
+		free(tab[i]); 
+	free(tab);
+	
 	return 0;
 }
