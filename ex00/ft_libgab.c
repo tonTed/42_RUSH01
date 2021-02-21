@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_libgab.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tonted <tonted@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 13:05:51 by gcollet           #+#    #+#             */
-/*   Updated: 2021/02/20 22:00:20 by tonted           ###   ########.fr       */
+/*   Updated: 2021/02/21 07:37:23 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
-
-void	ft_putchar(char c);
 
 int		ft_print_dev(char **tab)
 {
