@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tonted <tonted@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 10:06:47 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/20 23:34:34 by tonted           ###   ########.fr       */
+/*   Updated: 2021/02/21 08:35:26 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ int main(int argc, char **argv)
 		return (0);
 	tab = ft_malloc_tab_memory();
 
-	dev_set_tab(tab);
+	// dev_set_tab(tab);
 	// ft_print_dev(tab);
 	// ft_first_step(tab);
 	ft_print_dev(tab);
-	ft_second_step(tab);
+	// ft_second_step(tab);
+	ft_set_tab(tab, argv[1]);
 	ft_print_dev(tab);
 
 	ft_free_tab_memory(tab);

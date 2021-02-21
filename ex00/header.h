@@ -13,6 +13,7 @@ void	ft_free_tab_memory(char **tab);
 int		ft_is_in_row(char c, int row, char **tab);
 int		ft_is_in_col(char c, int col, char **tab);
 void	ft_second_step(char **tab);
+void	ft_set_tab(char **tab,char *input);
 
 int		g_RC;
 
