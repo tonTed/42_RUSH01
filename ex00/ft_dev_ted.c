@@ -6,7 +6,7 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 07:40:15 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/21 08:40:58 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/21 11:34:06 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,10 +78,35 @@ void	ft_set_full(char **tab)
 	}
 }
 
-void	ft_set_tab(char **tab,char *input)
+void	ft_set_tab_char(char ***tab_char)
+{
+	(void) tab_char;
+	int row;
+	int col;
+	int c;
+
+	row = - 1;
+	while (++row != g_RC)
+	{
+		col = -1;
+		while (++col != g_RC)
+		{
+			c = -1;
+			while(++c != g_RC)
+			{
+				tab_char[row][col][c] = '1' + c;	
+			}
+			tab_char[row][col][c] = '\0';
+			printf("string tab[%d][%d]: %s\n", row, col, tab_char[row][col]);
+		}
+	}
+}
+
+void	ft_set_tab(char **tab, char ***tab_char, char *input)
 {
 	ft_set_full(tab);
 	ft_set_lines(tab, input);
 	ft_set_columns(tab, input);
+	ft_set_tab_char(tab_char);
 }
 
