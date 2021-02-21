@@ -6,7 +6,7 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 13:05:51 by gcollet           #+#    #+#             */
-/*   Updated: 2021/02/21 09:10:20 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/21 12:51:10 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,11 +82,9 @@ int check_errors(char *str)
 		if (str[i] < '1' && str[i] > '9' && str[i] != ' ')
 			return (401);
 	}
-	printf("ft_libgab.c || Before 402 - count: %d\n", count);
 	if (!(count % 4 == 0))
 		return (402);
 	g_RC = count / 4;
-	printf("g_RC: %d\n", g_RC);
 	i = 0;
 	while (str[i + 1])
 	{
