@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memory.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tonted <tonted@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 21:35:03 by tonted            #+#    #+#             */
-/*   Updated: 2021/02/20 22:15:24 by tonted           ###   ########.fr       */
+/*   Updated: 2021/02/21 08:58:48 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	**ft_malloc_tab_memory()
 	
 	i = -1;
 	size = g_RC + 2;
-	printf("size: %d\n",size);
+	printf("ft_memory.c || size: %d\n",size);
 	tab = (char **)malloc(size * size * sizeof(char));
 	while(i++ < size)
 		tab[i] = (char *)malloc(size * sizeof(char));
