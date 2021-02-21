@@ -6,7 +6,7 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 13:05:51 by gcollet           #+#    #+#             */
-/*   Updated: 2021/02/21 07:37:23 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/21 08:53:07 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,9 @@ int check_errors(char *str)
 		if (str[i] < '1' && str[i] > '9' && str[i] != ' ')
 			return (404);
 	}
-	if (!(ft_sqrt(count)))
+	if (!(count % 4 == 0))
 		return (404);
+	else g_RC = count / 4;
 	i = 0;
 	while (str[i + 1])
 	{
