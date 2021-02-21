@@ -6,7 +6,7 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 10:06:47 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/21 11:46:51 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/21 12:27:42 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ int main(int argc, char **argv)
 
 	// dev_set_tab(tab);
 	ft_set_tab(tab, tab_char, argv[1]);
-	// ft_print_dev(tab);
-	// ft_first_step(tab);
-	// ft_print_dev(tab);
-	// ft_second_step(tab);
-	// ft_print_dev(tab);
+	ft_print_dev(tab);
+	ft_first_step(tab);
+	ft_print_dev(tab);
+	ft_second_step(tab);
+	ft_print_dev(tab);
 
 	ft_free_tab_memory(tab, tab_char);
 	return 0;
