@@ -6,7 +6,7 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 15:44:06 by gcollet           #+#    #+#             */
-/*   Updated: 2021/02/21 16:50:26 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/21 18:31:06 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>//REMOVE
+# include <stdio.h>
 
-int		ft_print_dev(char **tab);               //remove
 int		ft_print(char **tab);
 void	ft_putchar(char c);
 int		ft_sqrt(int nb);
@@ -36,11 +35,8 @@ void	set_possible_char(char **tab, char *str, int col, int row);
 void	ft_free_tab_test_memory(char **tab);
 void	ft_set_full_copy(char **tab, char **tab_origin);
 int		ft_compare_last(char **tab_test, char *str, int col, int row);
-void     ft_last_resolve(char **tab, char ***tab_str);
+void	ft_last_resolve(char **tab, char ***tab_str);
 
 int		g_rc;
-
-// REMOVE
-void	dev_set_tab();
 
 #endif

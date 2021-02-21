@@ -6,18 +6,48 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 15:11:08 by gcollet           #+#    #+#             */
-/*   Updated: 2021/02/21 16:49:18 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/21 18:24:29 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "header.h"
 
+void	ft_compare_row(char **tab, char *str, int row)
+{
+	int i;
+	int j;
+
+	i = 0;
+	while (i < g_rc)
+	{
+		j = -1;
+		while (++j < g_rc)
+			if (str[j] == tab[row][i + 1])
+				str[j] = '.';
+		i++;
+	}
+}
+
+void	ft_compare_col(char **tab, char *str, int col)
+{
+	int i;
+	int j;
+
+	i = 0;
+	while (i < g_rc)
+	{
+		j = -1;
+		while (++j < g_rc)
+			if (str[j] == tab[i + 1][col])
+				str[j] = '.';
+		i++;
+	}
+}
+
 int		ft_compare(char **tab, char *str, int col, int row)
 {
 	int		i;
-	int		j;
-	int		cpt;
 
 	i = -1;
 	if (tab[row][col] != '&')
@@ -28,24 +58,8 @@ int		ft_compare(char **tab, char *str, int col, int row)
 	}
 	while (str[++i] != '\0')
 	{
-		cpt = 0;
-		while (cpt < g_rc)
-		{
-			j = -1;
-			while (++j < g_rc)
-				if (str[j] == tab[row][cpt + 1])
-					str[j] = '.';
-			cpt++;
-		}
-		cpt = 0;
-		while (cpt < g_rc)
-		{
-			j = -1;
-			while (++j < g_rc)
-				if (str[j] == tab[cpt + 1][col])
-					str[j] = '.';
-			cpt++;
-		}
+		ft_compare_row(tab, str, row);
+		ft_compare_col(tab, str, col);
 	}
 	return (0);
 }
