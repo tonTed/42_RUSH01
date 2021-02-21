@@ -19,6 +19,9 @@ int		ft_compare(char **tab, char *str, int col, int row);
 void	ft_check_duplicate(char **tab, char ***tab_char);
 void    set_possible_char(char **tab, char *str, int col, int row);
 void	ft_free_tab_test_memory(char **tab);
+void	ft_set_full_copy(char **tab, char **tab_origin);
+int		ft_compare_last(char **tab_test, char *str, int col, int row);
+void     ft_last_resolve(char **tab, char ***tab_str);
 
 int		g_RC;
 

@@ -6,7 +6,7 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 10:06:47 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/21 14:28:14 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/21 16:37:48 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int main(int argc, char **argv)
 	ft_print_dev(tab);
 	ft_check_duplicate(tab, tab_char);
 	ft_print_dev(tab);
+	// ft_last_resolve(tab, tab_char);
 	// ft_print_dev(tab);
 
 	ft_free_tab_memory(tab, tab_char);

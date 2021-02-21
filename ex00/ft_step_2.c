@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_second_step.c                                   :+:      :+:    :+:   */
+/*   ft_step_2.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tonted <tonted@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 20:21:02 by tonted            #+#    #+#             */
-/*   Updated: 2021/02/20 23:51:27 by tonted           ###   ########.fr       */
+/*   Updated: 2021/02/21 16:37:19 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,8 +94,8 @@ void	ft_second_step_left(char **tab)
 
 void	ft_second_step(char **tab)
 {	
-	// ft_second_step_up(tab);
+	ft_second_step_up(tab);
 	ft_second_step_right(tab);
-	// ft_second_step_down(tab);
-	// ft_second_step_left(tab);
+	ft_second_step_down(tab);
+	ft_second_step_left(tab);
 }
