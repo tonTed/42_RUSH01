@@ -7,10 +7,10 @@ int     ft_print(char **tab);
 void 	ft_putchar(char c);
 int		ft_sqrt(int nb);
 int		check_errors(char *str);
-void	ft_putmax();
+void	ft_first_step(char **tab);
+char	**ft_malloc_tab_memory();
+void	ft_free_tab_memory(char **tab);
 
-
-char     **tab;
 int		g_RC;
 
 
@@ -18,5 +18,10 @@ int		g_RC;
 #include <stdlib.h>
 
 
-#include <stdio.h>  //REMOVE
+// REMOVE
+void	dev_set_tab();
+#include <stdio.h> 
+// REMOVE
+
+
 #endif

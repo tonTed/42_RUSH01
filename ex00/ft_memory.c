@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memory.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tonted <tonted@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/20 10:06:47 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/20 22:16:10 by tonted           ###   ########.fr       */
+/*   Created: 2021/02/20 21:35:03 by tonted            #+#    #+#             */
+/*   Updated: 2021/02/20 22:15:24 by tonted           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int main(int argc, char **argv)
+char	**ft_malloc_tab_memory()
 {
-	argv[1] = "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2";		//remove
-	
+	int i;
+	int size;
 	char **tab;
+	
+	i = -1;
+	size = g_RC + 2;
+	printf("size: %d\n",size);
+	tab = (char **)malloc(size * size * sizeof(char));
+	while(i++ < size)
+		tab[i] = (char *)malloc(size * sizeof(char));
+	return (tab);
+}
 
-	if (!(argc != 1 || check_errors(argv[1])))			// change argc != 2
-		return (0);
-	tab = ft_malloc_tab_memory();
+void	ft_free_tab_memory(char **tab)
+{
+	int i;
+	int size;
+	
+	i = 0;
+	size = g_RC + 2;
+	while(i < size)
+		free(tab[i++]);
+	free(tab);
 
-	dev_set_tab(tab);
-	ft_print_dev(tab);
-	ft_first_step(tab);
-	ft_print_dev(tab);
-
-	ft_free_tab_memory(tab);
-	return 0;
-} 
+}
