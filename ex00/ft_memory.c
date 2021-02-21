@@ -6,7 +6,7 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 21:35:03 by tonted            #+#    #+#             */
-/*   Updated: 2021/02/21 12:52:45 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/21 14:55:29 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,3 +68,17 @@ void	ft_free_tab_memory(char **tab, char ***tab_char)
 	}
 	free(tab_char);
 }
+
+void	ft_free_tab_test_memory(char **tab)
+{
+	int i;
+	int j;
+	int size;
+	
+	i = 0;
+	size = g_RC + 2;
+	while(i < size)
+		free(tab[i++]);
+	free(tab);
+}
+

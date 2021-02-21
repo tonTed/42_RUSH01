@@ -6,7 +6,7 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 07:40:15 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/21 14:27:47 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/21 14:58:23 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,3 +54,18 @@ void	ft_check_duplicate(char **tab, char ***tab_char)
 		}
 	}
 }
+
+void	ft_set_full_copy(char **tab, char **tab_origin)
+{
+	int row;
+	int col;
+
+	row = - 1;
+	while (++row != g_RC + 2)
+	{
+		col = -1;
+		while (++col != g_RC + 2)
+				tab[row][col] = tab_origin[row][col];
+	}
+}
+
