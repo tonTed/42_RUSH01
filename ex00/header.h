@@ -10,6 +10,8 @@ int		check_errors(char *str);
 void	ft_first_step(char **tab);
 char	**ft_malloc_tab_memory();
 void	ft_free_tab_memory(char **tab);
+int		ft_is_in_row(char c, int row, char **tab);
+int		ft_is_in_col(char c, int col, char **tab);
 
 int		g_RC;
 

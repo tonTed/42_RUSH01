@@ -6,7 +6,7 @@
 /*   By: tonted <tonted@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 10:06:47 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/20 22:16:10 by tonted           ###   ########.fr       */
+/*   Updated: 2021/02/20 22:48:03 by tonted           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,11 @@ int main(int argc, char **argv)
 
 	dev_set_tab(tab);
 	ft_print_dev(tab);
+	printf("is in row: %d\n", ft_is_in_row('2', 1, tab));
+	printf("is in col: %d\n", ft_is_in_row('4', 4, tab));
 	ft_first_step(tab);
+	printf("is in row: %d\n", ft_is_in_row('2', 1, tab));
+	printf("is in col: %d\n", ft_is_in_row('4', 4, tab));
 	ft_print_dev(tab);
 
 	ft_free_tab_memory(tab);
