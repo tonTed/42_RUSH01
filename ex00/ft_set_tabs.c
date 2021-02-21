@@ -12,7 +12,7 @@
 
 #include "header.h"
 
-void	ft_set_lines(char **tab,char *input)
+void	ft_set_lines(char **tab, char *input)
 {
 	int i;
 	int row;
@@ -21,41 +21,41 @@ void	ft_set_lines(char **tab,char *input)
 	i = 0;
 	row = 0;
 	col = 1;
-	while(g_RC != i / 2)
-	{ 
+	while (g_rc != i / 2)
+	{
 		tab[row][col++] = input[i];
 		i += 2;
 	}
-	row = g_RC + 1;
+	row = g_rc + 1;
 	col = 1;
-	while(g_RC * 2 != i / 2)
-	{ 
+	while (g_rc * 2 != i / 2)
+	{
 		tab[row][col++] = input[i];
 		i += 2;
 	}
 }
 
-void	ft_set_columns(char **tab,char *input)
+void	ft_set_columns(char **tab, char *input)
 {
 	int i;
 	int row;
 	int col;
-	
-	i = g_RC * 4;
+
+	i = g_rc * 4;
 	row = 1;
 	col = 0;
-	while(g_RC * 3 != i / 2)
-	{ 
+	while (g_rc * 3 != i / 2)
+	{
 		tab[row++][col] = input[i];
 		i += 2;
 	}
 	row = 1;
-	col = g_RC + 1;
-	while(g_RC * 4 != i / 2)
-	{ 
+	col = g_rc + 1;
+	while (g_rc * 4 != i / 2)
+	{
 		tab[row++][col] = input[i];
 		i += 2;
-	}	
+	}
 }
 
 void	ft_set_full(char **tab)
@@ -63,14 +63,14 @@ void	ft_set_full(char **tab)
 	int row;
 	int col;
 
-	row = - 1;
-	while (++row != g_RC + 2)
+	row = -1;
+	while (++row != g_rc + 2)
 	{
 		col = -1;
-		while (++col != g_RC + 2)
+		while (++col != g_rc + 2)
 		{
-			if ((row == 0 || row == g_RC + 1) && 
-				(col == 0 || col == g_RC + 1))
+			if ((row == 0 || row == g_rc + 1) &&
+				(col == 0 || col == g_rc + 1))
 				tab[row][col] = '!';
 			else
 				tab[row][col] = '&';
@@ -80,21 +80,20 @@ void	ft_set_full(char **tab)
 
 void	ft_set_tab_char(char ***tab_char)
 {
-	(void) tab_char;
 	int row;
 	int col;
 	int c;
 
-	row = - 1;
-	while (++row != g_RC)
+	row = -1;
+	while (++row != g_rc)
 	{
 		col = -1;
-		while (++col != g_RC)
+		while (++col != g_rc)
 		{
 			c = -1;
-			while(++c != g_RC)
+			while (++c != g_rc)
 			{
-				tab_char[row][col][c] = '1' + c;	
+				tab_char[row][col][c] = '1' + c;
 			}
 			tab_char[row][col][c] = '\0';
 		}

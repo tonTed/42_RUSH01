@@ -38,5 +38,5 @@ int main(int argc, char **argv)
 	// ft_print_dev(tab);
 
 	ft_free_tab_memory(tab, tab_char);
-	return 0;
+	return (0);
 } 

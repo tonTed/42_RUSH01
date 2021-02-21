@@ -25,11 +25,11 @@ void	ft_first_step_up(char **tab)
 
 	row = 0;
 	col = 0;
-	while(++col <= g_RC)
+	while (++col <= g_RC)
 	{
 		index = 0;
-		if(tab[row][col] == g_RC + '0')
-			while(++index <= g_RC)
+		if (tab[row][col] == g_RC + '0')
+			while (++index <= g_RC)
 				tab[index][col] = index + '0';
 		else if (tab[row][col] == '1')
 			tab[++index][col] = g_RC + '0';
@@ -37,7 +37,7 @@ void	ft_first_step_up(char **tab)
 }
 
 void	ft_first_step_right(char **tab)
-{	
+{
 	int row;
 	int col;
 	int index;
@@ -52,7 +52,7 @@ void	ft_first_step_right(char **tab)
 				tab[row][index] = g_RC - index + 1 + '0';
 		else if (tab[row][col] == '1')
 			tab[row][g_RC] = g_RC + '0';
-	}	
+	}
 }
 
 void	ft_first_step_down(char **tab)
@@ -90,11 +90,11 @@ void	ft_first_step_left(char **tab)
 				tab[row][index] = index + '0';
 		else if (tab[row][col] == '1')
 			tab[row][++index] = g_RC + '0';
-	}		
+	}
 }
 
 void	ft_first_step(char **tab)
-{	
+{
 	ft_first_step_up(tab);
 	ft_first_step_right(tab);
 	ft_first_step_down(tab);

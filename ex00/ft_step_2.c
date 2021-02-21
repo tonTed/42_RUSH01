@@ -24,34 +24,34 @@ void	ft_second_step_up(char **tab)
 
 	row = 0;
 	col = 0;
-	while(++col <= g_RC)
+	while (++col <= g_rc)
 	{
 		index = 0;
-		if(tab[row][col] == g_RC + '0' - 1 && tab[g_RC][col] == '1')
-			while(++index < g_RC)
+		if (tab[row][col] == g_rc + '0' - 1 && tab[g_rc][col] == '1')
+			while (++index < g_rc)
 				tab[index][col] = index + '1';
 		else if (tab[row][col] == '2' && tab[row + 1][col] == '3')
-			tab[row + 2][col] = g_RC + '0';
+			tab[row + 2][col] = g_rc + '0';
 	}
 }
 
 void	ft_second_step_right(char **tab)
-{	
+{
 	int row;
 	int col;
 	int index;
 
 	row = 0;
-	col = g_RC + 1;
-	while (++row <= g_RC)
+	col = g_rc + 1;
+	while (++row <= g_rc)
 	{
 		index = 1;
-		if (tab[row][col] == g_RC + '0' - 1 && tab[row][1] == '1')
-			while (++index <= g_RC)
-				tab[row][index] = g_RC - index + 1 + '1';
+		if (tab[row][col] == g_rc + '0' - 1 && tab[row][1] == '1')
+			while (++index <= g_rc)
+				tab[row][index] = g_rc - index + 1 + '1';
 		else if (tab[row][col] == '2' && tab[row][col - 1] == '3')
-			tab[row][g_RC - 2] = g_RC + '0';
-	}	
+			tab[row][g_rc - 2] = g_rc + '0';
+	}
 }
 
 void	ft_second_step_down(char **tab)
@@ -60,16 +60,16 @@ void	ft_second_step_down(char **tab)
 	int col;
 	int index;
 
-	row = g_RC + 1;
+	row = g_rc + 1;
 	col = 0;
-	while (++col <= g_RC)
+	while (++col <= g_rc)
 	{
 		index = 0;
-		if (tab[row][col] == g_RC + '0')
-			while (++index <= g_RC)
-				tab[index][col] = g_RC - index + 1 + '0';
+		if (tab[row][col] == g_rc + '0')
+			while (++index <= g_rc)
+				tab[index][col] = g_rc - index + 1 + '0';
 		else if (tab[row][col] == '1')
-			tab[g_RC][col] = g_RC + '0';
+			tab[g_rc][col] = g_rc + '0';
 	}
 }
 
@@ -81,21 +81,21 @@ void	ft_second_step_left(char **tab)
 
 	row = 0;
 	col = 0;
-	while (++row <= g_RC)
+	while (++row <= g_rc)
 	{
 		index = 0;
-		if (tab[row][col] == g_RC + '0')
-			while (++index <= g_RC)
+		if (tab[row][col] == g_rc + '0')
+			while (++index <= g_rc)
 				tab[row][index] = index + '0';
 		else if (tab[row][col] == '1')
-			tab[row][++index] = g_RC + '0';
-	}		
+			tab[row][++index] = g_rc + '0';
+	}
 }
 
 void	ft_second_step(char **tab)
-{	
-	// ft_second_step_up(tab);
+{
+	ft_second_step_up(tab);
 	ft_second_step_right(tab);
-	// ft_second_step_down(tab);
-	// ft_second_step_left(tab);
+	ft_second_step_down(tab);
+	ft_second_step_left(tab);
 }
