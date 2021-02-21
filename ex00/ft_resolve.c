@@ -19,9 +19,9 @@ void     ft_last_resolve(char **tab, char ***tab_str)
 	ft_set_full_copy(tab_test, tab);
 	
 
-	while (++row <= g_RC)
+	while (++row <= g_rc)
 	{
-		while (++col <= g_RC)
+		while (++col <= g_rc)
 		{
 			if (tab[col][row] == '&')
 			{

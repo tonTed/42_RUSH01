@@ -1,10 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   header.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/21 15:44:06 by gcollet           #+#    #+#             */
+/*   Updated: 2021/02/21 16:50:26 by tblanco          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef HEADER_H
-#define HEADER_H
+# define HEADER_H
 
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdio.h>//REMOVE
 
-int 	ft_print_dev(char **tab);               //remove
-int     ft_print(char **tab);
-void 	ft_putchar(char c);
+int		ft_print_dev(char **tab);               //remove
+int		ft_print(char **tab);
+void	ft_putchar(char c);
 int		ft_sqrt(int nb);
 int		check_errors(char *str);
 void	ft_first_step(char **tab);
@@ -17,23 +32,15 @@ void	ft_second_step(char **tab);
 void	ft_set_tab(char **tab, char ***tab_char, char *input);
 int		ft_compare(char **tab, char *str, int col, int row);
 void	ft_check_duplicate(char **tab, char ***tab_char);
-void    set_possible_char(char **tab, char *str, int col, int row);
+void	set_possible_char(char **tab, char *str, int col, int row);
 void	ft_free_tab_test_memory(char **tab);
 void	ft_set_full_copy(char **tab, char **tab_origin);
 int		ft_compare_last(char **tab_test, char *str, int col, int row);
 void     ft_last_resolve(char **tab, char ***tab_str);
 
-int		g_RC;
-
-
-#include <unistd.h>
-#include <stdlib.h>
-
+int		g_rc;
 
 // REMOVE
 void	dev_set_tab();
-#include <stdio.h> 
-// REMOVE
-
 
 #endif
