@@ -17,6 +17,7 @@ void	ft_second_step(char **tab);
 void	ft_set_tab(char **tab, char ***tab_char, char *input);
 int		ft_compare(char **tab, char *str, int col, int row);
 void	ft_check_duplicate(char **tab, char ***tab_char);
+void    set_possible_char(char **tab, char *str, int col, int row);
 
 int		g_RC;
 
