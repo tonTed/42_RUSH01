@@ -8,6 +8,15 @@ int		ft_compare(char **tab, char *str, int col, int row)
 	int		cpt;
 
 	i = 0;
+	if (tab[row][col] != '&')
+    {
+        while (str[i] != '\0')
+        {
+            str[i] = '.';
+            i++;
+        }
+        return (1);
+    }
 	while(str[i] != '\0')
 	{
 		cpt = 0;
