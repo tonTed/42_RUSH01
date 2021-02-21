@@ -6,7 +6,7 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 13:18:42 by gcollet           #+#    #+#             */
-/*   Updated: 2021/02/20 15:20:19 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/21 07:36:18 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,19 @@
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
+}
+
+int	ft_sqrt(int nb)
+{
+	int i;
+
+	i = 0;
+	if (!(nb > 2147395600))
+	while (++i <= nb)
+		if (i * i == nb && nb % i == 0)
+		{
+			g_RC = i;
+			return (1);
+		}
+	return 0;
 }
