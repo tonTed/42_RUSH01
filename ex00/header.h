@@ -6,7 +6,7 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 15:44:06 by gcollet           #+#    #+#             */
-/*   Updated: 2021/02/21 18:31:06 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/21 18:41:09 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 
 int		ft_print(char **tab);
 void	ft_putchar(char c);
