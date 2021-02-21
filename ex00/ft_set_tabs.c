@@ -6,7 +6,7 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 12:32:49 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/21 12:33:40 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/21 12:53:15 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,6 @@ void	ft_set_tab_char(char ***tab_char)
 				tab_char[row][col][c] = '1' + c;	
 			}
 			tab_char[row][col][c] = '\0';
-			printf("string tab[%d][%d]: %s\n", row, col, tab_char[row][col]);
 		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 21:35:03 by tonted            #+#    #+#             */
-/*   Updated: 2021/02/21 12:26:28 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/21 12:52:45 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ char	**ft_malloc_tab_memory()
 	
 	i = -1;
 	size = g_RC + 2;
-	printf("ft_memory.c || size: %d\n",size);
 	tab = (char **)malloc(size * size * sizeof(char));
 	while(i++ < size)
 		tab[i] = (char *)malloc(size * sizeof(char));
@@ -36,7 +35,6 @@ char	***ft_malloc_tab_char_memory()
 	
 	i = -1;
 	size = g_RC + 2;
-	printf("ft_memory.c || size: %d\n",size);
 	tab = (char ***)malloc(g_RC * g_RC * (g_RC + 1) * sizeof(char));
 	while(i++ <= g_RC)
 	{	

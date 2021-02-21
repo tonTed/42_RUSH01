@@ -15,6 +15,8 @@ int		ft_is_in_row(char c, int row, char **tab);
 int		ft_is_in_col(char c, int col, char **tab);
 void	ft_second_step(char **tab);
 void	ft_set_tab(char **tab, char ***tab_char, char *input);
+int		ft_compare(char **tab, char *str, int col, int row);
+void	ft_check_duplicate(char **tab, char ***tab_char);
 
 int		g_RC;
 
